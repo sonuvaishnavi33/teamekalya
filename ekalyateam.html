@@ -1,0 +1,1547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Navigation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://i.postimg.cc/nr2rdNPb/10ba4b1e-7761-4e1f-9c19-6cb537e0bb18.webp'); /* Add the path to your background image */
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        header {
+            background-color: rgba(76, 134, 175, 0.8); /* Slight transparency */
+            padding: 10px 20px;
+            color: white;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: rgba(1, 0, 7, 0.734);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+            display: block;
+        }
+
+        nav a:hover {
+            background-color: rgba(87, 87, 87, 0.375);
+        }
+
+        .section {
+            display: none;
+            padding: 20px;
+            margin: 10px auto;
+            background: rgba(255, 255, 255, 0.662); /* White background with transparency */
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 800px;
+            height: 1123px; /* Approx height for A4 */
+            overflow-y: auto; /* For scrolling if content overflows */
+        }
+
+        .section.active {
+            display: block;
+        }
+
+        footer {
+            background-color: rgba(51, 51, 51, 0.8);
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        pre, code {
+            background: rgba(0, 0, 0, 0.9);
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            display: block;
+            overflow-x: auto;
+            margin: 10px 0;
+        }
+
+        /* Styling for each team member block */
+        .team-member {
+            background-color: #ffffff;
+            border-radius: 15px; /* Curved edges for the rectangle blocks */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+            width: 100%; /* Ensure the blocks are full width of the container */
+            max-width: 700px; /* Optional: Set a max-width for the blocks */
+            margin: 10px auto; /* Center the blocks horizontally */
+        }
+
+        /* Hover effect for the blocks */
+        .team-member:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Header inside each team member block */
+        .team-member h3 {
+            font-size: 20px;
+            color: #0056b3;
+            margin-bottom: 10px;
+        }
+
+        /* Styling for the paragraph texts inside each block */
+        .team-member p {
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        /* Styling for links */
+        .team-member a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .team-member a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <script>
+        function showSection(id) {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => section.classList.remove('active'));
+            document.getElementById(id).classList.add('active');
+        }
+
+        // Show the first section by default
+        window.onload = () => showSection('home');
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Design Analysis and Algorithm's Project</h1>
+    </header>
+
+    <nav>
+        <a href="javascript:void(0);" onclick="showSection('home')">Home</a>
+        <a href="javascript:void(0);" onclick="showSection('team')">Team Portfolio</a>
+        <a href="javascript:void(0);" onclick="showSection('our-city and business cases')">Our City</a>
+        <a href="javascript:void(0);" onclick="showSection('implementation')">Implementation</a>
+        <a href="javascript:void(0);" onclick="showSection('sdgs')">SDGs</a>
+    </nav>
+
+    <section id="home" class="section" style="background-color: #f4f7f6ca; padding: 40px; text-align: center;">
+        <h1 style="font-size: 3rem; color: #2c3e50; font-weight: bold;">Welcome to Innovating City Ekalya</h1>
+        <p style="font-size: 1.2rem; color: #34495e; line-height: 1.6; margin-top: 20px;">
+            Innovating City Ekalya is a transformative initiative dedicated to solving urban challenges with cutting-edge algorithms. 
+            Under the visionary guidance of <strong style="color: #e74c3c;">Mrs. Vijaylakshmi CS</strong>, we focus on designing 
+            smart, sustainable solutions to enhance the quality of urban life.
+        </p>
+    
+        <h2 style="font-size: 2rem; color: #2980b9; margin-top: 40px;">What We Do</h2>
+        <ul style="text-align: left; max-width: 800px; margin: 0 auto; padding: 20px;">
+            <li style="font-size: 1.1rem; margin-bottom: 20px;">
+                <strong style="color: #e67e22;">Traffic Management:</strong> Developing advanced algorithms to optimize traffic flow and reduce congestion.
+            </li>
+            <li style="font-size: 1.1rem; margin-bottom: 20px;">
+                <strong style="color: #e67e22;">Waste Management:</strong> Creating efficient systems for smart waste collection and disposal, minimizing urban waste.
+            </li>
+            <li style="font-size: 1.1rem; margin-bottom: 20px;">
+                <strong style="color: #e67e22;">Energy Optimization:</strong> Designing predictive models to enhance energy efficiency across urban spaces.
+            </li>
+            <li style="font-size: 1.1rem; margin-bottom: 20px;">
+                <strong style="color: #e67e22;">Public Safety:</strong> Leveraging predictive analytics to improve public safety and reduce urban risks.
+            </li>
+        </ul>
+    
+        <p style="font-size: 1.2rem; color: #34495e; line-height: 1.6; margin-top: 40px;">
+            Join us on our mission to redefine urban living through the power of technology and innovation.
+        </p>
+    </section>
+    
+
+    <section id="team" class="section">
+        
+            <h2>Team Portfolio</h2>
+            <div class="team-member">
+                <h3>Sonu Vaishnavi, USN: 01FE23BCI093</h3>
+                <p><strong>Implementation:</strong> Implemented sorting algorithms like Merge Sort for efficient Library Management and Trees for structured File Management.</p>
+                <p><strong>Portfolio Link:</strong> <a href="https://sonuvaishnavi33.github.io/portfoliogithub.io/" target="_blank">Sonu Vaishnavi Portfolio</a></p>
+            </div>
+
+            <div class="team-member">
+                <h3>Kalpita, USN: 01FE23BCI104</h3>
+                <p><strong>Implementation:</strong> Utilized Minimum Spanning Tree (MST) for designing green spaces within the school and Breadth-First Search (BFS) for developing an Automated Lighting System.</p>
+                <p><strong>Portfolio Link:</strong> <a href="https://kalpita0812.github.io/portfolio01fe23bci104.github.io/" target="_blank">Kalpitha Portfolio</a></p>
+            </div>
+
+            <div class="team-member">
+                <h3>Aparna, USN: 01FE23BCI105</h3>
+                <p><strong>Implementation:</strong> Applied Dijkstra's Algorithm to optimize school navigation and Binary Search Trees (BST) for an advanced Grade Book System.</p>
+                <p><strong>Portfolio Link:</strong> <a href="https://aparna-shegade.github.io/portfolio244.github.io/" target="_blank">Aparna Portfolio</a></p>
+            </div>
+
+            <div class="team-member">
+                <h3>Aishwarya, USN: 01FE23BCI095</h3>
+                <p><strong>Implementation:</strong> Developed a School Campus Navigation System using Depth-First Search (DFS) and optimized Mess Food allocation through the Knapsack problem.</p>
+                <p><strong>Portfolio Link:</strong> <a href="https://aishwarya095.github.io/portfolio.github.io/" target="_blank">Aishwarya Portfolio</a></p>
+            </div>
+
+            <div class="team-member">
+                <h3>Nishchita, USN: 01FE23BCI106</h3>
+                <p><strong>Implementation:</strong> Enhanced Project Sorting with advanced algorithms and implemented String Matching for efficient Recycling Program Management.</p>
+                <p><strong>Portfolio Link:</strong> <a href="https://github.com/Nishchita106/DAA.github.io/commits?author=Nishchita106" target="_blank">Nishchitha Portfolio</a></p>
+            </div>
+        
+    </section>
+
+    <section id="our-city and business cases" class="section">
+        <h2>Our City - Ekalavya</h2>
+        <p>Ekalavya is a wonderful place with a rich cultural and historical background. Here, we strive to bring development and innovation together.</p>
+        <h2>Business Cases Identified</h2>
+    <p>Innovating Schools in Ekalavya City to Enhance Educational Experience</p>
+    <img src="c:\Users\Lenovo\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\TempState\E49774D191D2589093DFA6DC07095670\WhatsApp Image 2025-01-06 at 15.34.20_4db2110a.jpg" alt="Business Cases Identified" style="width: 100%; max-width: 800px; margin: 20px auto; display: block;">
+    <iframe src="https://coral-pearle-43.tiiny.site/smart-city-plan-1.pdf" width="100%" height="800px" style="border: none;" type="application/pdf"></iframe>
+    </section>
+    
+    <section id="implementation" class="section">
+        <h2>Implementation</h2>
+        <div>
+            <div class="team-member">
+                <h3>Sonu Vaishnavi</h3>
+                <p>Implemented Merge Sort for managing the library database efficiently and used Trees for structuring file management systems.</p>
+                <P>This program simulates a file management system using a Red-Black Tree. A Red-Black Tree is a self-balancing binary search tree (BST) that ensures logarithmic time complexity for insertions and deletions, which is useful for managing a large number of files efficiently.</P>
+                <pre><code>
+                    #include < iostream>
+                        #include < string>
+                        using namespace std;
+                        
+                        // Node structure for Red-Black Tree
+                        struct Node {
+                            string fileName;      // File name
+                            int fileSize;         // File size in KB
+                            string creationDate;  // Creation date
+                            bool isRed;           // Red (true) or Black (false)
+                            Node *left, *right, *parent;
+                        
+                            Node(string name, int size, string date)
+                                : fileName(name), fileSize(size), creationDate(date), isRed(true), left(nullptr), right(nullptr), parent(nullptr) {}
+                        };
+                        
+                        // Red-Black Tree class
+                        class RedBlackTree {
+                            Node *root;
+                        
+                            // Rotate left
+                            void rotateLeft(Node *&x) {
+                                Node *y = x->right;
+                                x->right = y->left;
+                                if (y->left != nullptr)
+                                    y->left->parent = x;
+                                y->parent = x->parent;
+                                if (x->parent == nullptr)
+                                    root = y;
+                                else if (x == x->parent->left)
+                                    x->parent->left = y;
+                                else
+                                    x->parent->right = y;
+                                y->left = x;
+                                x->parent = y;
+                            }
+                        
+                            // Rotate right
+                            void rotateRight(Node *&x) {
+                                Node *y = x->left;
+                                x->left = y->right;
+                                if (y->right != nullptr)
+                                    y->right->parent = x;
+                                y->parent = x->parent;
+                                if (x->parent == nullptr)
+                                    root = y;
+                                else if (x == x->parent->left)
+                                    x->parent->left = y;
+                                else
+                                    x->parent->right = y;
+                                y->right = x;
+                                x->parent = y;
+                            }
+                        
+                            // Fix Red-Black Tree violations after insertion
+                            void fixInsert(Node *&node) {
+                                while (node != root && node->parent->isRed) {
+                                    Node *parent = node->parent;
+                                    Node *grandparent = parent->parent;
+                        
+                                    // Case A: Parent is the left child
+                                    if (parent == grandparent->left) {
+                                        Node *uncle = grandparent->right;
+                        
+                                        // Case A1: Uncle is red
+                                        if (uncle != nullptr && uncle->isRed) {
+                                            parent->isRed = false;
+                                            uncle->isRed = false;
+                                            grandparent->isRed = true;
+                                            node = grandparent;
+                                        } else {
+                                            // Case A2: Node is the right child
+                                            if (node == parent->right) {
+                                                rotateLeft(parent);
+                                                node = parent;
+                                                parent = node->parent;
+                                            }
+                                            // Case A3: Node is the left child
+                                            rotateRight(grandparent);
+                                            swap(parent->isRed, grandparent->isRed);
+                                            node = parent;
+                                        }
+                                    } else { // Case B: Parent is the right child
+                                        Node *uncle = grandparent->left;
+                        
+                                        // Case B1: Uncle is red
+                                        if (uncle != nullptr && uncle->isRed) {
+                                            parent->isRed = false;
+                                            uncle->isRed = false;
+                                            grandparent->isRed = true;
+                                            node = grandparent;
+                                        } else {
+                                            // Case B2: Node is the left child
+                                            if (node == parent->left) {
+                                                rotateRight(parent);
+                                                node = parent;
+                                                parent = node->parent;
+                                            }
+                                            // Case B3: Node is the right child
+                                            rotateLeft(grandparent);
+                                            swap(parent->isRed, grandparent->isRed);
+                                            node = parent;
+                                        }
+                                    }
+                                }
+                                root->isRed = false; // Root is always black
+                            }
+                        
+                        public:
+                            // Constructor
+                            RedBlackTree() : root(nullptr) {}
+                        
+                            // Insert function
+                            void insert(const string &fileName, int fileSize, const string &creationDate) {
+                                Node *newNode = new Node(fileName, fileSize, creationDate);
+                        
+                                if (root == nullptr) {
+                                    root = newNode;
+                                    root->isRed = false; // Root is black
+                                    return;
+                                }
+                        
+                                Node *current = root;
+                                Node *parent = nullptr;
+                        
+                                // Standard BST insertion
+                                while (current != nullptr) {
+                                    parent = current;
+                                    if (newNode->fileName < current->fileName)
+                                        current = current->left;
+                                    else
+                                        current = current->right;
+                                }
+                        
+                                newNode->parent = parent;
+                                if (newNode->fileName < parent->fileName)
+                                    parent->left = newNode;
+                                else
+                                    parent->right = newNode;
+                        
+                                // Fix Red-Black Tree violations
+                                fixInsert(newNode);
+                            }
+                        
+                            // Display function (In-Order Traversal)
+                            void inOrderTraversal(Node *node) {
+                                if (node == nullptr)
+                                    return;
+                                inOrderTraversal(node->left);
+                                cout << "File Name: " << node->fileName << ", Size: " << node->fileSize
+                                     << " KB, Creation Date: " << node->creationDate
+                                     << (node->isRed ? " (Red)" : " (Black)") << endl;
+                                inOrderTraversal(node->right);
+                            }
+                        
+                            // Display all files
+                            void display() {
+                                if (root == nullptr) {
+                                    cout << "No files in the system!" << endl;
+                                    return;
+                                }
+                                cout << "School File Management System (Sorted by File Name):" << endl;
+                                inOrderTraversal(root);
+                            }
+                        };
+                        
+                        int main() {
+                            RedBlackTree fileSystem;
+                        
+                            // Add files to the system
+                            fileSystem.insert("Assignments.pdf", 2048, "2025-01-01");
+                            fileSystem.insert("ClassNotes.docx", 1024, "2024-12-15");
+                            fileSystem.insert("LibraryData.xlsx", 5120, "2024-12-20");
+                            fileSystem.insert("StudentRecords.csv", 3072, "2025-01-03");
+                            fileSystem.insert("Timetable.pdf", 256, "2025-01-04");
+                        
+                            // Display files
+                            fileSystem.display();
+                        
+                            return 0;
+                        }
+                    </code></pre>
+                    <p>This C++ code demonstrates how to manage a library of books, and it uses the Merge Sort algorithm to sort the books in alphabetical order based on their titles. The code includes various components such as a Book structure, sorting functionality, and methods for displaying the books before and after sorting.</p>
+                    <code><pre>#include < iostream>
+                        #include < vector>
+                        using namespace std;
+                        
+                        // Structure to represent a book in the library
+                        struct Book {
+                            string title;  // Book title
+                            string author; // Author of the book
+                            int year;      // Year of publication
+                        
+                            // Function to print the details of a book
+                            void displayDetails() const {
+                                cout << "Title: " << title << ", Author: " << author << ", Year: " << year << endl;
+                            }
+                        };
+                        
+                        // Function to merge two sorted portions of the library
+                        void mergeBooks(vector< Book> &library, int start, int mid, int end) {
+                            int size1 = mid - start + 1; // Size of the left portion
+                            int size2 = end - mid;       // Size of the right portion
+                        
+                            // Temporary arrays to hold divided parts
+                            vector< Book> leftPart(size1);
+                            vector< Book> rightPart(size2);
+                        
+                            // Copy data into temporary arrays
+                            for (int i = 0; i < size1; i++) leftPart[i] = library[start + i];
+                            for (int i = 0; i < size2; i++) rightPart[i] = library[mid + 1 + i];
+                        
+                            int i = 0, j = 0, k = start;
+                        
+                            // Merge sorted portions into the original array
+                            while (i < size1 && j < size2) {
+                                if (leftPart[i].title <= rightPart[j].title) {
+                                    library[k] = leftPart[i];
+                                    i++;
+                                } else {
+                                    library[k] = rightPart[j];
+                                    j++;
+                                }
+                                k++;
+                            }
+                        
+                            // Append any remaining elements from the left or right part
+                            while (i < size1) {
+                                library[k] = leftPart[i];
+                                i++;
+                                k++;
+                            }
+                            while (j < size2) {
+                                library[k] = rightPart[j];
+                                j++;
+                                k++;
+                            }
+                        }
+                        
+                        // Recursive function to perform merge sort on the library
+                        void sortBooks(vector< Book> &library, int start, int end) {
+                            if (start < end) {
+                                int mid = start + (end - start) / 2; // Calculate midpoint
+                        
+                                // Sort the two halves
+                                sortBooks(library, start, mid);
+                                sortBooks(library, mid + 1, end);
+                        
+                                // Merge the sorted halves
+                                mergeBooks(library, start, mid, end);
+                            }
+                        }
+                        
+                        int main() {
+                            vector< Book> library; // Dynamic collection of books
+                        
+                            // Adding sample books to the library
+                            library.push_back({"The Alchemist", "Paulo Coelho", 1988});
+                            library.push_back({"Harry Potter and the Philosopher's Stone", "J.K. Rowling", 1997});
+                            library.push_back({"Animal Farm", "George Orwell", 1945});
+                            library.push_back({"A Brief History of Time", "Stephen Hawking", 1988});
+                            library.push_back({"The Catcher in the Rye", "J.D. Salinger", 1951});
+                        
+                            // Display unsorted library
+                            cout << "Library (Before Sorting):" << endl;
+                            for (const auto &book : library) {
+                                book.displayDetails();
+                            }
+                        
+                            // Perform merge sort on the library
+                            sortBooks(library, 0, library.size() - 1);
+                        
+                            // Display sorted library
+                            cout << "\nLibrary (After Sorting by Title):" << endl;
+                            for (const auto &book : library) {
+                                book.displayDetails();
+                            }
+                        
+                            return 0;
+                        }</pre></code> </div>
+            </div>
+            <div class="team-member">
+                <h3>Kalpita</h3>
+                <p>Minimum Spanning Tree (MST)
+                    Application
+                    1. Optimal Layout Planning: The school grounds can be represented as a graph, where nodes represent different potential locations for green spaces or gardens, and edges represent the paths or connections between them. Each edge can have a weight representing the cost, distance, or resources required to connect those locations.
+                    
+                    By applying an MST algorithm r Prim's algorithm), we can find the subset of edges that connects all the nodes (locations) with the minimum total weight, ensuring that the layout is both cost-effective and efficient. This helps in determining the most efficient way to layout the green spaces or gardens with minimal resource use.</p>
+        <code><pre>
+             #include < iostream>
+            #include < vector>
+            #include < climits>
+            using namespace std;
+            
+            #define MAX_NODES 100
+            
+            class Graph {
+                int V; // Number of vertices
+                vector< vector< int>> adj; // Adjacency matrix
+            
+            public:
+                Graph(int V) {
+                    this->V = V;
+                    adj.resize(V, vector< int>(V, 0));
+                }
+            
+                void addEdge(int u, int v, int weight) {
+                    adj[u][v] = weight;
+                    adj[v][u] = weight;
+                }
+            
+                void primMST() {
+                    int parent[MAX_NODES]; // Array to store constructed MST
+                    int key[MAX_NODES]; // Key values used to pick minimum weight edge in cut
+                    bool mstSet[MAX_NODES]; // To represent set of vertices included in MST
+            
+                    // Initialize all keys as INFINITE and mstSet[] as false
+                    for (int i = 0; i < V; i++) {
+                        key[i] = INT_MAX;
+                        mstSet[i] = false;
+                    }
+            
+                    // Starting from the vertex 0
+                    key[0] = 0; // Start from the first vertex
+                    parent[0] = -1; // First node is always the root of MST
+            
+                    // Find the MST with V vertices
+                    for (int count = 0; count < V - 1; count++) {
+                        // Pick the minimum key vertex from the set of vertices not yet included in MST
+                        int u = minKey(key, mstSet);
+            
+                        // Add the picked vertex to the MST Set
+                        mstSet[u] = true;
+            
+                        // Update key value and parent index of the adjacent vertices of the picked vertex
+                        for (int v = 0; v < V; v++) {
+                            if (adj[u][v] && mstSet[v] == false && adj[u][v] < key[v]) {
+                                parent[v] = u;
+                                key[v] = adj[u][v];
+                            }
+                        }
+                    }
+            
+                    // Print the connected nodes with their weights
+                    printEdges();
+            
+                    // Print the constructed MST
+                    printMST(parent);
+                }
+            
+            private:
+                // Function to find the vertex with the minimum key value, from the set of vertices not yet included in the MST
+                int minKey(int key[], bool mstSet[]) {
+                    int min = INT_MAX, min_index;
+            
+                    for (int v = 0; v < V; v++) {
+                        if (mstSet[v] == false && key[v] < min) {
+                            min = key[v];
+                            min_index = v;
+                        }
+                    }
+            
+                    return min_index;
+                }
+            
+                // Function to print the connected nodes with their weights
+                void printEdges() {
+                    cout << "Connected Nodes and Weights(resources req):\n";
+                    for (int i = 0; i < V; i++) {
+                        for (int j = i + 1; j < V; j++) {
+                            if (adj[i][j] != 0) {
+                                cout << i << " - " << j << "\t" << adj[i][j] << " \n";
+                            }
+                        }
+                    }
+                }
+            
+                // Function to print the constructed MST stored in parent[]
+                void printMST(int parent[]) {
+                    cout << "MST Edges \tWeight\n";
+                    int minimumCost = 0;
+                    for (int i = 1; i < V; i++) {
+                        cout << parent[i] << " - " << i << "\t\t" << adj[i][parent[i]] << " \n";
+                        minimumCost += adj[i][parent[i]];
+                    }
+                    cout << "Minimum cost(resources): " << minimumCost << endl;
+                }
+            };
+            
+            int main() {
+                int V = 5; // Example: 5 locations for green spaces or gardens
+                Graph g(V);
+            
+                // Adding edges with weights
+                g.addEdge(0, 1, 5);
+                g.addEdge(0, 2, 7);
+                g.addEdge(1, 3, 5);
+                g.addEdge(2, 3, 4);
+                g.addEdge(0, 4, 2);
+                g.addEdge(1, 4, 3);
+                g.addEdge(2, 4, 4);
+                g.addEdge(3, 4, 5);
+            
+                // Function call to construct and print MST
+                g.primMST();
+            
+                return 0;
+            }
+            </pre>
+        </code>
+
+
+            <p> Graph Representation: The sensors in classroom is represented as a graph with an adjacency matrix.
+
+                BFS for Occupancy Check: The BFS algorithm traverses the graph and checks each node (sensor) for occupancy during traversal. The BFS traversal is displayed.
+                
+                Lighting Control During Traversal: The light status for each (node) is controlled and displayed during the traversal based on the occupancy status.
+                
+                User Input for Occupancy Status: The program prompts the user to input the occupancy status (1 if occupied, 0 if not) for each sensor</p>
+                <code><pre>#include < iostream>
+                    using namespace std;
+                    
+                    #define MAX_NODES 100
+                    
+                    // BFS to check occupancy and control lights during traversal
+                    void bfs(int m[MAX_NODES][MAX_NODES], int v, int source, bool occupiedNodes[]) {
+                        int queue[MAX_NODES];
+                        int front = 0, rear = 0, u, i;
+                        bool visited[MAX_NODES] = {false};
+                    
+                        queue[rear] = source;
+                        visited[source] = true;
+                    
+                        cout << "The BFS Traversal is... \n";
+                    
+                        while (front <= rear) {
+                            u = queue[front++];
+                            cout << u << "\t"; // Display BFS traversal
+                    
+                            // Check and control light for the current node
+                            if (occupiedNodes[u]) {
+                                cout << "\nSensor " << u << ": Lights ON (Occupied)\n";
+                            } else {
+                                cout << "\nSensor " << u << ": Lights OFF (Not Occupied)\n";
+                            }
+                    
+                            // Traverse adjacent nodes
+                            for (i = 0; i < v; i++) {
+                                if (m[u][i] == 1 && !visited[i]) {
+                                    visited[i] = true;
+                                    queue[++rear] = i;
+                                }
+                            }
+                        }
+                    }
+                    
+                    int main() {
+                        int v = 5; // Example: 5 sensors in the classroom
+                        int m[MAX_NODES][MAX_NODES] = {
+                            {0, 0, 1, 1, 0},
+                            {0, 0, 1, 1, 1},
+                            {1, 1, 0, 0, 0},
+                            {1, 1, 0, 0, 1},
+                            {0, 1, 0, 1, 0}
+                    
+                        };
+                    
+                        // Initialize sensor occupancy data
+                        bool occupiedNodes[MAX_NODES];
+                        cout << "Enter occupancy status for each sensor (1 if occupied, 0 if not):" << endl;
+                        for (int i = 0; i < v; i++) {
+                            cout << "Sensor " << i << ": ";
+                            int input;
+                            cin >> input;
+                            occupiedNodes[i] = (input == 1);
+                        }
+                    
+                        int source;
+                        cout << "Enter the source vertex: ";
+                        cin >> source;
+                    
+                        bfs(m, v, source, occupiedNodes);
+                    
+                        return 0;
+                    }
+                    </pre></code>
+        
+</code> </div>
+<div class="team-member">
+    <h3>Aparna</h3>
+    <p>1) This program aims to optimize school bus routes by identifying the shortest and most efficient paths for transportation. By minimizing travel distances, it reduces fuel consumption, ensures timely pick-up and drop-off of students, and promotes safer and more reliable school commutes.
+
+        Implementation
+        Input Data: Represent the school's road network as a graph, where vertices represent stops (e.g., student homes or bus stops) and edges represent roads with weights corresponding to distances or travel times.
+        Execution: Run the program with the school's location as the source vertex.
+        Use the output to determine the shortest distances from the school to each stop and optimize bus routes accordingly.</p>
+    <code><pre>#include < iostream>
+        #include < limits.h>
+        #include < algorithm>
+        
+        #define V 9 // Number of vertices
+        
+        // Function to find the vertex with the minimum distance value
+        int minDistance(int dist[], bool sptSet[]) {
+            int min = INT_MAX, min_index;
+        
+            for (int v = 0; v < V; v++)
+                if (!sptSet[v] && dist[v] <= min)
+                    min = dist[v], min_index = v;
+        
+            return min_index;
+        }
+        
+        // Function that implements Dijkstra's algorithm
+        void dijkstra(int graph[V][V], int src, int dist[], int parent[]) {
+            bool sptSet[V]; // sptSet[i] will be true if vertex i is included in SPT
+        
+            // Initialize all distances as INFINITE and sptSet[] as false
+            for (int i = 0; i < V; i++) {
+                dist[i] = INT_MAX;
+                sptSet[i] = false;
+                parent[i] = -1; // Initialize parent array
+            }
+        
+            // Distance of source vertex from itself is always 0
+            dist[src] = 0;
+        
+            // Find shortest path for all vertices
+            for (int count = 0; count < V - 1; count++) {
+                int u = minDistance(dist, sptSet);
+                sptSet[u] = true;
+        
+                for (int v = 0; v < V; v++)
+                    if (!sptSet[v] && graph[u][v] && dist[u] != INT_MAX && dist[u] + graph[u][v] < dist[v]) {
+                        parent[v] = u; // Update parent
+                        dist[v] = dist[u] + graph[u][v];
+                    }
+            }
+        }
+        
+        // Function to print the path from source to j
+        void printPath(int parent[], int j) {
+            if (parent[j] == -1)
+                return;
+        
+            printPath(parent, parent[j]);
+            std::cout << j << " ";
+        }
+        
+        // Function to print the distances and paths
+        void printSolution(int dist[], int parent[], int src) {
+            std::cout << "Vertex \t Distance from Source \t Path\n";
+            for (int i = 0; i < V; i++) {
+                std::cout << "\n" << src << " -> " << i << " \t\t " << dist[i] << " \t\t " << src << " ";
+                printPath(parent, i);
+            }
+            std::cout << std::endl;
+        }
+        
+        // Function to determine the recommended route
+        void recommendRoute(int dist[], int parent[], int src) {
+            int visited[V] = {0};
+            visited[src] = 1;
+        
+            std::cout << "Recommended route starting from School " << ": " << src;
+        
+            for (int i = 0; i < V - 1; i++) {
+                int minDist = INT_MAX;
+                int nextNode = src;
+        
+                for (int j = 0; j < V; j++) {
+                    if (!visited[j] && dist[j] < minDist) {
+                        minDist = dist[j];
+                        nextNode = j;
+                    }
+                }
+        
+                visited[nextNode] = 1;
+                std::cout << " -> " << nextNode;
+            }
+            std::cout << " -> back to " << src << "\n";
+        }
+        
+        int main() {
+            int graph[V][V] = { { 0, 4, 0, 0, 0, 0, 0, 8, 0 },
+                                { 4, 0, 8, 0, 0, 0, 0, 11, 0 },
+                                { 0, 8, 0, 7, 0, 4, 0, 0, 2 },
+                                { 0, 0, 7, 0, 9, 14, 0, 0, 0 },
+                                { 0, 0, 0, 9, 0, 10, 0, 0, 0 },
+                                { 0, 0, 4, 14, 10, 0, 2, 0, 0 },
+                                { 0, 0, 0, 0, 0, 2, 0, 1, 6 },
+                                { 8, 11, 0, 0, 0, 0, 1, 0, 7 },
+                                { 0, 0, 2, 0, 0, 0, 6, 7, 0 } };
+        
+            int school_location = 0;
+            int dist[V];
+            int parent[V]; // Array to store the shortest path tree
+        
+            dijkstra(graph, school_location, dist, parent);
+            printSolution(dist, parent, school_location);
+            recommendRoute(dist, parent, school_location);
+        
+            return 0;
+        }
+        </pre></code>
+
+    <p>2) This program provides an efficient way to maintain a digital gradebook for schools. By organizing student data using a Binary Search Tree (BST), it ensures quick access, updates, and display of student information, such as roll numbers, names, and grades, sorted in descending order of performance.</p>
+    <code><pre> #include < iostream>
+        #include < string>
+        
+        struct Student {
+            int rollNumber;
+            std::string name;
+            float grade;
+            Student* left;
+            Student* right;
+        
+            Student(int r, std::string n, float g) : rollNumber(r), name(n), grade(g), left(NULL), right(NULL) {}
+        };
+        
+        class Gradebook {
+        public:
+            Gradebook() : root(NULL) {}
+        
+            void insert(int rollNumber, std::string name, float grade) {
+                root = insertRec(root, rollNumber, name, grade);
+            }
+        
+            void reverseInorder() {
+                reverseInorderRec(root);
+            }
+        
+            Student* search(int rollNumber) {
+                return searchRec(root, rollNumber);
+            }
+        
+            void updateGrade(int rollNumber, float newGrade) {
+                root = deleteRec(root, rollNumber);
+                insert(rollNumber, getStudentName(root, rollNumber), newGrade);
+                std::cout << "Updated grade for roll number " << rollNumber << " to " << newGrade << std::endl;
+            }
+        
+        private:
+            Student* root;
+        
+            Student* insertRec(Student* node, int rollNumber, std::string name, float grade) {
+                if (node == NULL) {
+                    return new Student(rollNumber, name, grade);
+                }
+                if (grade < node->grade) {
+                    node->left = insertRec(node->left, rollNumber, name, grade);
+                } else if (grade > node->grade) {
+                    node->right = insertRec(node->right, rollNumber, name, grade);
+                }
+                return node;
+            }
+        
+            void reverseInorderRec(Student* node) {
+                if (node != NULL) {
+                    reverseInorderRec(node->right);
+                    std::cout << "Roll Number: " << node->rollNumber << ", Name: " << node->name << ", Grade: " << node->grade << std::endl;
+                    reverseInorderRec(node->left);
+                }
+            }
+        
+            Student* searchRec(Student* node, int rollNumber) {
+                if (node == NULL || node->rollNumber == rollNumber) {
+                    return node;
+                }
+                if (rollNumber < node->rollNumber) {
+                    return searchRec(node->left, rollNumber);
+                }
+                return searchRec(node->right, rollNumber);
+            }
+        
+            std::string getStudentName(Student* node, int rollNumber) {
+                if (node == NULL) return "";
+                if (node->rollNumber == rollNumber) return node->name;
+                if (rollNumber < node->rollNumber) return getStudentName(node->left, rollNumber);
+                return getStudentName(node->right, rollNumber);
+            }
+        
+            Student* deleteRec(Student* root, int rollNumber) {
+                if (root == NULL) return root;
+                if (rollNumber < root->rollNumber) {
+                    root->left = deleteRec(root->left, rollNumber);
+                } else if (rollNumber > root->rollNumber) {
+                    root->right = deleteRec(root->right, rollNumber);
+                } else {
+                    if (root->left == NULL) {
+                        Student* temp = root->right;
+                        delete root;
+                        return temp;
+                    } else if (root->right == NULL) {
+                        Student* temp = root->left;
+                        delete root;
+                        return temp;
+                    }
+        
+                    Student* temp = minValueNode(root->right);
+                    root->rollNumber = temp->rollNumber;
+                    root->name = temp->name;
+                    root->grade = temp->grade;
+                    root->right = deleteRec(root->right, temp->rollNumber);
+                }
+                return root;
+            }
+        
+            Student* minValueNode(Student* node) {
+                Student* current = node;
+                while (current && current->left != NULL)
+                    current = current->left;
+                return current;
+            }
+        };
+        
+        int main() {
+            Gradebook gradebook;
+            int rollNumber;
+            std::string name;
+            float grade;
+            char choice;
+        
+            do {
+                std::cout << "Enter roll number: ";
+                std::cin >> rollNumber;
+                std::cin.ignore(); // To clear the newline character from the buffer
+        
+                std::cout << "Enter name: ";
+                std::getline(std::cin, name);
+        
+                std::cout << "Enter grade: ";
+                std::cin >> grade;
+        
+                gradebook.insert(rollNumber, name, grade);
+        
+                std::cout << "Do you want to enter another record? (y/n): ";
+                std::cin >> choice;
+        
+            } while (choice == 'y' || choice == 'Y');
+        
+            // Print the gradebook in descending order by grades
+            std::cout << "Gradebook in descending order by grades:" << std::endl;
+            gradebook.reverseInorder();
+        
+            return 0;
+        }
+        </pre></code>
+
+
+        <div class="team-member">
+            <h3>Aishwarya</h3>
+            <p>Depth-First Search (DFS) in school navigation is a method of exploring a school building by starting at one room (like the entrance) and moving as far as possible along one path before backtracking and exploring other paths.
+
+                In this approach:
+                
+                The school is represented as a graph, with rooms as nodes and hallways or doors as edges.
+                DFS begins at a starting room, then visits connected rooms one by one, going deeper until it can't go further.
+                Once a dead-end or destination is reached, the search backtracks to explore any unvisited rooms.
+                While DFS is easy to implement, it may not always find the shortest path and can get stuck in loops, so it's best for exploring all rooms systematically rather than finding the quickest route.</p>
+            <code><pre>#include < iostream>
+                #include < unordered_map>
+                #include < vector>
+                #include < string>
+                #include < algorithm>
+                using namespace std;
+                
+                
+                #define MAX_LOCATIONS 100
+                
+                
+                class Graph {
+                private:
+                    int numLocations;
+                    int adjMatrix[MAX_LOCATIONS][MAX_LOCATIONS];
+                    string locationNames[MAX_LOCATIONS];
+                    unordered_map< string, int> locationMap;
+                
+                public:
+                
+                    Graph(int locations) {
+                        numLocations = locations;
+                
+                
+                        for (int i = 0; i < numLocations; i++) {
+                            for (int j = 0; j < numLocations; j++) {
+                                adjMatrix[i][j] = 0;
+                            }
+                        }
+                    }
+                
+                
+                    void addEdge(int src, int dest) {
+                        adjMatrix[src][dest] = 1;
+                        adjMatrix[dest][src] = 1;
+                    }
+                
+                
+                    void setLocationName(int index, string name) {
+                        locationNames[index] = name;
+                        locationMap[toLowerCase(name)] = index;
+                    }
+                
+                
+                    unordered_map< string, int>& getLocationMap() {
+                        return locationMap;
+                    }
+                
+                
+                    string toLowerCase(string str) {
+                        transform(str.begin(), str.end(), str.begin(), ::tolower);
+                        return str;
+                    }
+                
+                
+                    string trim(const string& str) {
+                        size_t first = str.find_first_not_of(" \t\n\r\f\v");
+                        size_t last = str.find_last_not_of(" \t\n\r\f\v");
+                        return (first == string::npos) ? "" : str.substr(first, (last - first + 1));
+                    }
+                
+                
+                    void DFS(int location, bool visited[], bool& libraryVisited, bool& classroomVisited) {
+                
+                        visited[location] = true;
+                        cout << "Visited: " << locationNames[location] << endl;
+                
+                
+                        if (locationNames[location] == "Library" && !libraryVisited) {
+                            cout << "Library visited" << endl;
+                            libraryVisited = true;
+                        }
+                        if (locationNames[location] == "Classroom" && !classroomVisited) {
+                            cout << "Classroom visited" << endl;
+                            classroomVisited = true;
+                        }
+                
+                
+                        for (int i = 0; i < numLocations; i++) {
+                            if (adjMatrix[location][i] == 1 && !visited[i]) {
+                                DFS(i, visited, libraryVisited, classroomVisited);
+                            }
+                        }
+                    }
+                
+                    void startDFS(string startLocation) {
+                
+                        int startIdx = locationMap[toLowerCase(startLocation)];
+                
+                
+                        bool visited[MAX_LOCATIONS] = { false };
+                        bool libraryVisited = false;
+                        bool classroomVisited = false;
+                
+                
+                        DFS(startIdx, visited, libraryVisited, classroomVisited);
+                
+                
+                        if (!libraryVisited) {
+                            cout << "Library not visited" << endl;
+                        }
+                        if (!classroomVisited) {
+                            cout << "Classroom not visited" << endl;
+                        }
+                    }
+                };
+                
+                int main() {
+                    int locations, edges;
+                
+                
+                    cout << "Enter the number of locations (nodes): ";
+                    cin >> locations;
+                    cin.ignore();
+                
+                    Graph campusGraph(locations);
+                
+                
+                    cout << "Enter the names of locations:\n";
+                    for (int i = 0; i < locations; i++) {
+                        string locationName;
+                        cout << "Enter name for location " << i << ": ";
+                        getline(cin, locationName);
+                        campusGraph.setLocationName(i, campusGraph.trim(locationName));
+                    }
+                
+                    cout << "Enter the number of connections (edges): ";
+                    cin >> edges;
+                    cin.ignore();
+                
+                
+                    cout << "Enter the connections (edges) between locations :\n";
+                    for (int i = 0; i < edges; i++) {
+                        string edge;
+                        cout << "Enter the edge (location1 location2): ";
+                        getline(cin, edge);
+                
+                
+                        size_t spacePos = edge.find(' ');
+                        if (spacePos == string::npos) {
+                            cout << "Invalid edge format!" << endl;
+                            continue;
+                        }
+                
+                        string location1 = edge.substr(0, spacePos);
+                        string location2 = edge.substr(spacePos + 1);
+                
+                
+                        unordered_map< string, int>& locationMap = campusGraph.getLocationMap();
+                
+                
+                        location1 = campusGraph.trim(location1);
+                        location2 = campusGraph.trim(location2);
+                
+                        string location1_lower = campusGraph.toLowerCase(location1);
+                        string location2_lower = campusGraph.toLowerCase(location2);
+                
+                
+                        if (locationMap.find(location1_lower) == locationMap.end() ||
+                            locationMap.find(location2_lower) == locationMap.end()) {
+                            cout << "Invalid location names provided for edge!" << endl;
+                            continue;
+                        }
+                
+                        int src = locationMap[location1_lower];
+                        int dest = locationMap[location2_lower];
+                
+                        campusGraph.addEdge(src, dest);
+                    }
+                
+                    string startLocation;
+                    cout << "Enter the starting locations :\n";
+                    getline(cin, startLocation);
+                
+                
+                    campusGraph.startDFS(startLocation);
+                
+                    return 0;
+                }</pre></code>
+        
+            <p>The knapsack problem program provides a solution to the optimization problem where you aim to maximize the total value of items (in this case, dishes) while staying within a given constraint (like a budget or capacity). Here’s what it achieves:
+
+                Optimal Selection: It identifies the best combination of items that maximize the total value without exceeding the constraint.
+                
+                Resource Allocation: It ensures efficient use of resources, helping you make the most of your available budget.
+                
+                Decision Making: It aids in making informed decisions about which items to include and which to exclude, based on their value-to-cost ratio.
+                
+                For example, in a mess food scenario, the program can help select the most nutritious combination of dishes that fit within a specified budget, ensuring that the meal provides the maximum possible nutritional value.</p>
+            <code><pre>#include < stdio.h>
+
+
+                int max(int a, int b) {
+                    return (a > b) ? a : b;
+                }
+                
+                
+                int knapsack(int capacity, int weights[], int values[], int n) {
+                    int i, w;
+                    int K[n + 1][capacity + 1];
+                
+                    
+                    for (i = 0; i <= n; i++) {
+                        for (w = 0; w <= capacity; w++) {
+                            if (i == 0 || w == 0) {
+                                K[i][w] = 0;
+                            } else if (weights[i - 1] <= w) {
+                                K[i][w] = max(values[i - 1] + K[i - 1][w - weights[i - 1]], K[i - 1][w]);
+                            } else {
+                                K[i][w] = K[i - 1][w];
+                            }
+                        }
+                    }
+                
+                    return K[n][capacity];
+                }
+                
+                int main() {
+                    int n, capacity;
+                
+                   
+                    printf("Enter the number of food items: ");
+                    scanf("%d", &n);
+                
+                    int values[n], weights[n];
+                    char names[n][50];
+                
+                    printf("Enter the names, nutritional values, and costs of the food items:\n");
+                    for (int i = 0; i < n; i++) {
+                        printf("Name of item %d: ", i + 1);
+                        scanf("%s", names[i]);
+                        printf("Nutritional value of %s: ", names[i]);
+                        scanf("%d", &values[i]);
+                        printf("Cost of %s: ", names[i]);
+                        scanf("%d", &weights[i]);
+                    }
+                
+                    
+                    printf("Enter the maximum capacity (budget): ");
+                    scanf("%d", &capacity);
+                
+                    int maxValue = knapsack(capacity, weights, values, n);
+                
+                   
+                    printf("Maximum nutritional value in knapsack = %d\n", maxValue);
+                
+                    return 0;
+                }</pre></code>
+        
+        </div>
+
+</div>
+<div class="team-member">
+    <h3>Nishchita</h3>
+    <p>This program aims to prioritize and organize projects based on their importance. By sorting projects in order of their priority values, it allows users to focus on high-priority tasks first, ensuring efficient resource allocation and streamlined decision-making. It is particularly useful in scenarios where tasks need to be scheduled or executed based on their significance.
+
+        Implementation
+        Input Data: The user provides the number of projects and their details, including a name (e.g., "Water Conservation Project") and a priority value (e.g., 85). The projects are stored in a list to be processed.
+        Execution: The program builds a max-heap using the bottom-up approach, ensuring the project with the highest priority is at the root. It then repeatedly removes the maximum priority project, places it at the end of the list, and heapifies the remaining elements until the list is sorted. The output is a list of projects arranged in ascending order of priority.</p>
+    <code><pre>#include < iostream>
+        #include < vector>
+        #include < string>
+        using namespace std;
+        
+        // Struct to represent a project with a name and priority
+        struct Project {
+            string name;
+            int priority; // Higher priority values indicate more importance
+        };
+        
+        // Function to construct a heap using the bottom-up approach
+        void heapBottomUp(vector< Project> &heap, int n) {
+            for (int i = n / 2 - 1; i >= 0; i--) { // Start from the last non-leaf node
+                int k = i;
+                Project v = heap[k];
+                bool isHeap = false;
+        
+                while (!isHeap && 2 * k + 1 < n) { // While k has a left child
+                    int j = 2 * k + 1; // Left child
+                    if (j + 1 < n && heap[j + 1].priority > heap[j].priority) {
+                        j = j + 1; // j points to the larger child
+                    }
+        
+                    if (v.priority >= heap[j].priority) {
+                        isHeap = true;
+                    } else {
+                        heap[k] = heap[j]; // Move larger child up
+                        k = j; // Move down the heap
+                    }
+                }
+                heap[k] = v; // Place v in its correct position
+            }
+        }
+        
+        // Function to perform maximum key deletion (root deletion) and heapify
+        void deleteMax(vector< Project> &heap, int &n) {
+            // Swap the root with the last element
+            swap(heap[0], heap[n - 1]);
+        
+            // Decrease the heap size
+            n--;
+        
+            // Heapify the reduced heap
+            int k = 0;
+            Project v = heap[k];
+            bool isHeap = false;
+        
+            while (!isHeap && 2 * k + 1 < n) { // While k has a left child
+                int j = 2 * k + 1; // Left child
+                if (j + 1 < n && heap[j + 1].priority > heap[j].priority) {
+                    j = j + 1; // j points to the larger child
+                }
+        
+                if (v.priority >= heap[j].priority) {
+                    isHeap = true;
+                } else {
+                    heap[k] = heap[j]; // Move larger child up
+                    k = j; // Move down the heap
+                }
+            }
+            heap[k] = v; // Place v in its correct position
+        }
+        
+        // Heap Sort function
+        void heapSort(vector< Project> &projects) {
+            int n = projects.size();
+        
+            // Step 1: Build the heap
+            heapBottomUp(projects, n);
+        
+            // Step 2: Perform n - 1 deletions
+            for (int i = n; i > 1; i--) {
+                deleteMax(projects, n);
+            }
+        }
+        
+        int main() {
+            int numProjects;
+        
+            // Ask the user for the number of projects
+            cout << "Enter the number of projects: ";
+            cin >> numProjects;
+            cin.ignore(); // To consume the trailing newline character left by cin
+        
+            // Create a vector to store projects
+            vector< Project> projects;
+        
+            // Input project details
+            for (int i = 0; i < numProjects; ++i) {
+                Project project;
+                cout << "Enter name for project " << i + 1 << ": ";
+                getline(cin, project.name); // Use getline to allow spaces in project name
+                cout << "Enter priority for project " << i + 1 << ": ";
+                cin >> project.priority;
+                cin.ignore(); // Consume the newline character after entering priority
+                projects.push_back(project);
+            }
+        
+            cout << "\nOriginal Projects:\n";
+            for (const auto &project : projects) {
+                cout << "Name: " << project.name << ", Priority: " << project.priority << endl;
+            }
+            cout << endl;
+        
+            // Sort the projects using Heap Sort
+            heapSort(projects);
+        
+            cout << "Sorted Projects by Priority:\n";
+            for (const auto &project : projects) {
+                cout << "Name: " << project.name << ", Priority: " << project.priority << endl;
+            }
+        
+            return 0;
+        }
+        </pre></code>
+
+    <p>This program aims to categorize waste materials based on their labels, enabling efficient waste management and recycling. By identifying specific keywords within the labels, the program assigns each item to a predefined category, ensuring proper sorting and reducing the effort required for manual categorization. This approach is particularly beneficial in scenarios where large volumes of waste need to be sorted quickly and accurately.
+
+        Implementation
+        Input:
+        The user provides a list of waste materials, each with a descriptive label (e.g., "Plastic Bottle"). These materials are stored in a vector of WasteMaterial structs, with the label provided and the category initially left empty.
+        Execution:
+        The program begins by defining a set of categories such as Plastic, Metal, Paper, Glass, Organic, and Electronic. Each category is associated with a list of keywords. For every waste material, the label is converted to lowercase to enable case-insensitive matching. The program checks whether any of the keywords appear in the label. If a keyword is found, the material is assigned the corresponding category. If no keywords match, the material is categorized as "Uncategorized." The categorized materials are then displayed with their labels and assigned categories.</p>
+    <code><pre>#include < iostream>
+        #include < vector>
+        #include < string>
+        #include < algorithm>
+        using namespace std;
+        
+        // Struct to represent waste material
+        struct WasteMaterial {
+            string label;    // Name of the waste
+            string category; // Categorized result
+        };
+        
+        // Function to categorize waste materials using string matching on the label
+        void categorizeWaste(vector< WasteMaterial> &materials) {
+            // Define keywords for each category
+            vector< pair< string, vector<string>>> categories = {
+                {"Plastic", {"plastic", "bottle", "bag", "polymer"}},
+                {"Metal", {"metal", "can", "aluminum", "iron", "steel"}},
+                {"Paper", {"paper", "cardboard", "magazine", "book"}},
+                {"Glass", {"glass", "bottle", "window", "jar"}},
+                {"Organic", {"organic", "food", "compost", "waste"}},
+                {"Electronic", {"electronic", "battery", "circuit", "device"}}
+            };
+        
+            // Categorize each material based on matching keywords in the label
+            for (auto &material : materials) {
+                string lowerLabel = material.label;
+        
+                // Convert label to lowercase for case-insensitive matching
+                transform(lowerLabel.begin(), lowerLabel.end(), lowerLabel.begin(), ::tolower);
+        
+                // Match against each category
+                for (const auto &category : categories) {
+                    for (const auto &keyword : category.second) {
+                        if (lowerLabel.find(keyword) != string::npos) {
+                            material.category = category.first;
+                            break;
+                        }
+                    }
+                    if (!material.category.empty()) break; // Stop if category is found
+                }
+        
+                // If no category is found, label as "Uncategorized"
+                if (material.category.empty()) {
+                    material.category = "Uncategorized";
+                }
+            }
+        }
+        
+        int main() {
+            // List of waste materials with their labels
+            vector< WasteMaterial> materials = {
+                {"Plastic Bottle", ""},
+                {"Aluminum Can", ""},
+                {"Cardboard Box", ""},
+                {"Glass Jar", ""},
+                {"Food Waste", ""},
+                {"Battery Pack", ""},
+                {"Random Object", ""}
+            };
+        
+            // Categorize the materials
+            categorizeWaste(materials);
+        
+            // Display the categorized materials
+            cout << "Categorized Waste Materials:\n";
+            for (const auto &material : materials) {
+                cout << "Label: " << material.label << ", Category: " << material.category << endl;
+            }
+        
+            return 0;
+        }
+        </pre></code>
+
+</div>
+            <!-- Add more team members here -->
+        </div>
+    </section>
+
+    <section id="sdgs" class="section">
+        <h2>Our Commitment to Sustainable Development Goals</h2>
+    
+        <!-- SDG 2: Zero Hunger -->
+        <div class="sdg-block">
+            <h3>SDG 2: Zero Hunger</h3>
+            <img src="c:\Users\Lenovo\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\TempState\2C98005815B8652F236D1BE11039C4BC\WhatsApp Image 2025-01-06 at 12.21.35_82850ec4.jpg" alt="SDG 2 Image" style="width: 100%; max-width: 300px; margin: 10px auto; display: block;">
+            <h4>Relevance:</h4>
+            <p>Optimizes the selection of nutritious foods within budget constraints, ensuring students receive balanced meals without waste.</p>
+            <h4>Impact:</h4>
+            <p>Promotes health and well-being by addressing hunger and ensuring access to nutritious meals, especially in schools.</p>
+        </div>
+    
+        <!-- SDG 4: Quality Education -->
+        <div class="sdg-block">
+            <h3>SDG 4: Quality Education</h3>
+            <img src="c:\Users\Lenovo\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\TempState\0879D1169D86866B3C5EB9643D2DBB9F\WhatsApp Image 2025-01-06 at 12.22.40_e9599a81.jpg" alt="SDG 4 Image" style="width: 100%; max-width: 300px; margin: 10px auto; display: block;">
+            <h4>Relevance:</h4>
+            <p>Enhances the management of student records, promoting efficiency and transparency in educational processes.</p>
+            <p>Well-planned green spaces foster outdoor learning opportunities and student well-being.</p>
+            <h4>Impact:</h4>
+            <p>Facilitates better tracking of student performance, enabling targeted support for underperforming students.</p>
+            <p>Supports holistic education by integrating sustainable infrastructure.</p>
+            <p>Improves navigation around the campus, creating a more conducive learning environment.</p>
+        </div>
+    
+        <!-- SDG 7: Affordable and Clean Energy -->
+        <div class="sdg-block">
+            <h3>SDG 7: Affordable and Clean Energy</h3>
+            <img src="c:\Users\Lenovo\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\TempState\1F26274CF175D14AE59F3FFE75563AB5\WhatsApp Image 2025-01-06 at 12.23.26_50062d44.jpg" alt="SDG 7 Image" style="width: 100%; max-width: 300px; margin: 10px auto; display: block;">
+            <h4>Relevance:</h4>
+            <p>Optimizes energy consumption by turning lights on/off based on occupancy.</p>
+            <h4>Impact:</h4>
+            <p>Reduces energy wastage, promotes energy efficiency, and supports the adoption of clean and sustainable energy solutions.</p>
+        </div>
+    
+        <!-- SDG 8: Decent Work and Economic Growth -->
+        <div class="sdg-block">
+            <h3>SDG 8: Decent Work and Economic Growth</h3>
+            <img src="c:\Users\Lenovo\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\TempState\D95A83EC34CFD0B4F0BCAC275A26913A\WhatsApp Image 2025-01-06 at 12.24.02_e22d7515.jpg" alt="SDG 8 Image" style="width: 100%; max-width: 300px; margin: 10px auto; display: block;">
+            <h4>Relevance:</h4>
+            <p>Promotes sustained, inclusive, and sustainable economic growth, full and productive employment, and decent work for all.</p>
+            <h4>Impact:</h4>
+            <p>Efficient resource allocation through task prioritization supports productive and effective work environments.</p>
+        </div>
+    
+        <!-- SDG 9: Industry, Innovation, and Infrastructure -->
+        <div class="sdg-block">
+            <h3>SDG 9: Industry, Innovation, and Infrastructure</h3>
+            <img src="c:\Users\Lenovo\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\TempState\2C98005815B8652F236D1BE11039C4BC\WhatsApp Image 2025-01-06 at 12.21.35_993304dc.jpg" alt="SDG 9 Image" style="width: 100%; max-width: 300px; margin: 10px auto; display: block;">
+            <h4>Relevance:</h4>
+            <p>Use of smart technologies (sensors, graphs, and algorithms) reflects innovation in infrastructure.</p>
+            <p>Graph-based algorithms (e.g., MST) represent data-driven approaches to infrastructure development.</p>
+            <h4>Impact:</h4>
+            <p>Encourages modern, efficient, and sustainable infrastructure in schools and public spaces.</p>
+            <p>Streamlines project execution and supports innovation in technology, engineering, and infrastructure.</p>
+        </div>
+    
+        <!-- SDG 11: Sustainable Cities and Communities -->
+        <div class="sdg-block">
+            <h3>SDG 11: Sustainable Cities and Communities</h3>
+            <img src="c:\Users\Lenovo\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\TempState\5152B6CA192C7C14BC740C30954CADB9\WhatsApp Image 2025-01-06 at 12.25.02_c52ea78d.jpg" alt="SDG 11 Image" style="width: 100%; max-width: 300px; margin: 10px auto; display: block;">
+            <h4>Relevance:</h4>
+            <p>Promotes sustainable planning and development of urban areas.</p>
+            <h4>Impact:</h4>
+            <p>Encourages inclusivity, safety, resilience, and sustainability in urban and educational settings.</p>
+        </div>
+    
+        <!-- SDG 12: Responsible Consumption and Production -->
+        <div class="sdg-block">
+            <h3>SDG 12: Responsible Consumption and Production</h3>
+            <img src="c:\Users\Lenovo\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\TempState\EDF985E622C578D3B38C42E225EFAF0B\WhatsApp Image 2025-01-06 at 12.26.04_2848378e.jpg" alt="SDG 12 Image" style="width: 100%; max-width: 300px; margin: 10px auto; display: block;">
+            <h4>Relevance:</h4>
+            <p>Advocates for the efficient use of resources and the minimization of waste.</p>
+            <h4>Impact:</h4>
+            <p>Ensures long-term sustainability by adopting responsible consumption practices.</p>
+        </div>
+    
+        <!-- SDG 13: Climate Action -->
+        <div class="sdg-block">
+            <h3>SDG 13: Climate Action</h3>
+            <img src="c:\Users\Lenovo\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\TempState\06F2BB500A6456F9199A3041D556EC83\WhatsApp Image 2025-01-06 at 12.27.23_54afc712.jpg" alt="SDG 13 Image" style="width: 100%; max-width: 300px; margin: 10px auto; display: block;">
+            <h4>Relevance:</h4>
+            <p>Supports efforts to combat climate change by integrating energy-efficient and environmentally friendly solutions.</p>
+            <h4>Impact:</h4>
+            <p>Mitigates the adverse effects of climate change through sustainable practices.</p>
+        </div>
+    </section>
+    
+
+    <footer>
+        <p>Designed By Sonu Vaishnavi, Aishwarya, Kalpitha , Aparna and Nischitha &copy; Team Ekalya</p>
+    </footer>
+</body>
+</html>
